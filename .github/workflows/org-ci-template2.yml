@@ -15,3 +15,7 @@ jobs:
 
       - name: step 2
         run:  echo "second step"
+  deploy-job:
+   runs-on: ubuntu-latest   
+      - name: install go
+        uses: actions/setup-go@v5.5.0
