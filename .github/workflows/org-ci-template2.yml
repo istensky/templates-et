@@ -16,8 +16,9 @@ jobs:
 
       - name: step 2
         run:  echo "second step"
+        
       - name: check event name
-        run: echo "event name is : ${{github.event_name }} "
+        run: echo "event name is ${{ github.event_name }} "
   deploy-job:
    runs-on: ubuntu-latest   
    steps:
