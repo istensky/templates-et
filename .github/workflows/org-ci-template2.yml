@@ -1,4 +1,4 @@
-name: this is second attempt
+ on github and send to runnername: this is second attempt
 on:
   workflow_dispatch:
   push:
@@ -17,12 +17,19 @@ jobs:
       - name: step 2
         run:  echo "second step"
         
-      - name: check event name
+      - name: check event name check on github and send to runner
         run: echo "event name is ${{ github.event_name }} "
-  
+
+      - name: check event name check  linux runner
+        run: echo "Triggered event is $GITHUB_EVENT_NAME "
+  buid-win:
+     runs-on: windows-latest
+     steps:
+      - name: check event name check  windows runner
+        run: echo "Triggered event is $env:GITHUB_EVENT_NAME "
   deploy-job:
     runs-on: ubuntu-latest   
-    needs: build-job
+    needs: [ build-job ,build-win ]
     steps:
       - name:  setup-custom-task
         uses: nightstory/setup-task@v1
