@@ -17,5 +17,6 @@ jobs:
         run:  echo "second step"
   deploy-job:
    runs-on: ubuntu-latest   
-      - name: install go
-        uses: actions/setup-go@v5.5.0
+   steps:
+      - name:  setup-custom-task
+        uses: nightstory/setup-task@v1
