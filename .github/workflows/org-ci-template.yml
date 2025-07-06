@@ -1,7 +1,8 @@
+name: build with reusable template as starter
 on:
   push:
     branches: [ "main" ]
-  pull-request:
+  pull_request:
    branches: [ "main" ]
 jobs:
   build-job:
