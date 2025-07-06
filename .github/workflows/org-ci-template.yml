@@ -1,0 +1,16 @@
+on:
+  push:
+    branches: [ "main" ]
+  pull-reqiest:
+   branches: [ "main" ]
+jobs:
+  build-job:
+    run-on: ubuntu-latest
+
+    steps:
+
+      - name: step 1
+        run:  echo "first step"
+
+      - name: step 2
+        run:  echo "second step"
