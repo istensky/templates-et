@@ -1,0 +1,17 @@
+name: this is second attempt
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+   branches: [ "main" ]
+jobs:
+  build-job:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: step 1
+        run:  echo "first step"
+
+      - name: step 2
+        run:  echo "second step"
